@@ -1,0 +1,92 @@
+body {
+  background-color: #1a1a1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.news-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: 350px;
+  height: 500px;
+  position: relative; 
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.image-box {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.news-card .view-bar {
+  position: absolute;
+  top: 72%; 
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.news-card .text-content {
+  position: absolute;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  height: 20%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* --- STYLE 2: Dạng Rikkeisoft Overlay --- */
+.overlay-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, black 20%, transparent 80%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  color: white;
+  box-sizing: border-box;
+}
+
+/* --- STYLE 3: Dạng Automotive Inset Border --- */
+.inset-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Inset border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+/* --- HIỆU ỨNG HOVER TỔNG HỢP --- */
+.card:hover {
+  transform: scale(0.95) rotate(-3deg); /* Thu nhỏ và xoay */
+  box-shadow: inset 0 0 0 5px #ff7b00; /* Inset border cam */
+}
